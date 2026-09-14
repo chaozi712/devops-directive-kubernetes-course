@@ -4,7 +4,7 @@ env:
   CLUSTER_NAME: devops-directive-kubernetes-course
   CIVO_REGION: NYC1
   GCP_REGION: australia-southeast1
-  GCP_ZONE: australia-southeast1-a
+  GCP_ZONE: australia-southeast1-b
   # Set default gum style options
   BORDER: double
   BORDER_FOREGROUND: "212"
@@ -141,7 +141,7 @@ tasks:
           --zone ${GCP_ZONE} \
           --network ${CLUSTER_NAME} \
           --subnetwork subnet-1 \
-          --machine-type n1-standard-1 \
+          --machine-type e2-medium \
           --num-nodes 2 \
           --gateway-api=standard \
           --workload-pool={{.GCP_PROJECT_ID}}.svc.id.goog
